@@ -1,0 +1,17 @@
+TITLE
+distance restraints on ACE in CNEG
+END
+#DISTANCERESSPEC
+# DISH  DISC
+#  0.1   0.153
+  # i   j   k  l  type    i    j    k  l  type  r0    w0   rah
+# distance restraint on Ca2+
+#  6  35   39   42  -1     2    0    0  0    0    0.000 1.0  0
+#END
+PERTDISRESSPEC
+# DISH  DISC
+  0.1   0.153
+# i   j   k   l  type      i    j     k  l  type  n m   A_r0  A_w0  B_r0   B_w0  rah
+  6  35   39   42  -1     2    0    0  0    0     0 0    0.0   1.0  2.65    1.0    0
+END
+

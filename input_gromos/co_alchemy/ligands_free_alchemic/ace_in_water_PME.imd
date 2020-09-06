@@ -1,0 +1,106 @@
+TITLE
+	Automatically generated input file
+	reifm Mon May 14 09:53:23 2012
+END
+SYSTEM
+#      NPM      NSM
+         1     1162
+END
+STEP
+#   NSTLIM         T        DT
+     50000       300     0.002
+END
+BOUNDCOND
+#      NTB    NDFMIN
+         1         3
+END
+MULTIBATH
+#ALGORITHM:
+#      weak-coupling:      use weak-coupling scheme
+#      nose-hoover:        use Nose Hoover scheme
+#      nose-hoover-chains: use Nose Hoover chains scheme
+# NUM: number of chains in Nose Hoover chains scheme
+#      !! only specify NUM when needed !!
+# NBATHS: number of temperature baths to couple to
+#          ALGORITHM
+                   0
+#  NBATHS
+         2
+# TEMP0(1 ... NBATHS)  TAU(1 ... NBATHS)
+       300       0.1
+       300       0.1
+# DOFSET: number of distiguishable sets of d.o.f.
+         2
+# LAST(1 ... DOFSET)  COMBATH(1 ... DOFSET)  IRBATH(1 ... DOFSET)
+        4         1         1      3490         2         2
+END
+PRESSURESCALE
+# COUPLE   SCALE    COMP    TAUP  VIRIAL
+       0       1 0.0007513      0.5        2
+# SEMIANISOTROPIC COUPLINGS(X, Y, Z)
+       0        0        0
+# PRES0(1...3,1...3)
+ 0.06102       0       0
+       0 0.06102       0
+       0       0 0.06102
+END
+FORCE
+#      NTF array
+# bonds    angles   imp.     dihe     charge nonbonded
+  0        1        1        1        1      1
+# NEGR    NRE(1)    NRE(2)    ...      NRE(NEGR)
+     1
+          3490
+END
+CONSTRAINT
+# NTC
+    3
+#      NTCP  NTCP0(1)
+          1    0.0001
+#      NTCS  NTCS0(1)
+          1    0.0001
+END
+PAIRLIST
+# algorithm    NSNB   RCUTP   RCUTL    SIZE    TYPE
+          0       1     1.0     1.0     0.5       1
+END
+INITIALISE
+# Default values for NTI values: 0
+#   NTIVEL    NTISHK    NTINHT    NTINHB
+         0         0         0         0
+#   NTISHI    NTIRTC    NTICOM
+         0         0         0
+#   NTISTI
+         0
+#       IG     TEMPI
+       137       300
+END
+#COMTRANSROT
+#     NSCM
+#      1000
+#END
+PRINTOUT
+#NTPR: print out energies, etc. every NTPR steps
+#NTPP: =1 perform dihedral angle transition monitoring
+#     NTPR      NTPP
+       250         0
+END
+WRITETRAJ
+#    NTWX     NTWSE      NTWV      NTWF      NTWE      NTWG      NTWB
+      250         0         0         0        25        25         0
+END
+
+
+NONBONDED
+# NLRELE    APPAK      RCRF     EPSRF  NSLFEXCL
+       3      0.0       1.0      66.6         1
+# NSHAPE   ASHAPE    NA2CLC   TOLA2   EPSLS
+       3       1.4        2   1e-10       0
+# NKX    NKY   NKZ    KCUT
+   10     10    10     100
+# NGX   NGY   NGZ  NASORD  NFDORD   NALIAS  NSPORD
+   32    32    32       3       2        3       4
+# NQEVAL   FACCUR   NRDGRD   NWRGRD   NLRLJ    SLVDNS
+  100000      1.6        0        0       0      33.3
+END
+

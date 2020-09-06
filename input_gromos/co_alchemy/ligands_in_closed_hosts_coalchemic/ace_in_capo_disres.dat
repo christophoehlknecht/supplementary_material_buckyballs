@@ -1,0 +1,12 @@
+TITLE
+distance restraint - cog buckyball to Na 1.9 nm (Rc + half buckyball diameter)
+END
+DISTANCERESSPEC
+# DISH  DISC
+  0.1   0.153
+# NTDIR in DISTANCERES block set to 2 (force constant = CDIR*w0)
+# CDIR in DISTANCERES block set to 1
+# i   j   k   l  type    i   j   k   l  type   r0   w0   rah
+  5  30  47  53    -1   65   0   0   0     0  2.25  1000     0
+END
+
